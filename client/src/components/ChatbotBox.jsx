@@ -15,7 +15,7 @@ const ChatbotBox = () => {
     setInput("");
 
     try {
-      const response = await axios.post("http://localhost:5000/api/ai/chat", { message: input });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/ai/chat`, { message: input });
       const botReply = { role: "bot", text: response.data.reply };
       setMessages((prev) => [...prev, botReply]);
     } catch {
