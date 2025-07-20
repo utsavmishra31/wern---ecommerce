@@ -160,6 +160,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
                   )
                 }
               >
+                
                 Add to Cart
               </Button>
             )}
